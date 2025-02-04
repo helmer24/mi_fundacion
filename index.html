@@ -3,31 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundación</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fundación para el Emprendimiento</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@400&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(64, 224, 208, 0.9), rgba(72, 61, 139, 0.9));
+            color: #ffffff;
+            display: grid;
+            grid-template-columns: 20% auto 20%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar {
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .sidebar.left {
+            background: rgba(64, 224, 208, 0.8);
+            color: #000000;
+        }
+
+        .sidebar.right {
+            background: rgba(72, 61, 139, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .logo-background {
+            margin-top: 10px;
+            max-width: 150px;
+        }
+
+        .flags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .flags img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ffffff;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-images {
+            display: flex;
+            width: 400%;
+            animation: slide 10s infinite;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            object-fit: cover;
+            height: 300px;
+        }
+
+        @keyframes slide {
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-100%); }
+            50%, 70% { transform: translateX(-200%); }
+            75%, 95% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #FFD700;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="logo_fundacion_sin_fondo.png" alt="Logo de la Fundación">
-    </header>
-    <section>
-        <h1>FUNDACIÓN PARA EL EMPRENDIMIENTO EL DESARROLLO Y LA FORMACIÓN SOCIAL ARTÍSTICA Y CULTURAL</h1>
+    <div class="sidebar left">
+        <h2>MISIÓN</h2>
+        <p>Nuestra fundación impulsa el emprendimiento, la formación y la creación artística y cultural...</p>
+        <h2>VISIÓN</h2>
+        <p>Ser una fundación referente en la promoción del emprendimiento y la gestión cultural...</p>
+    </div>
+
+    <div class="content">
+        <h1>Fundación para el Emprendimiento...</h1>
+        <img src="imagen/logo_fundacion_sin_fondo.png" alt="Logo de la Fundación" class="logo-background">
         <h2>Ubicación</h2>
         <p>Pailitas, Cesar, Colombia</p>
-        <img src="bandera_pailitas.png" alt="Bandera de Pailitas">
-        <img src="bandera_colombia.png" alt="Bandera de Colombia">
-    </section>
-    <section>
+        <div class="flags">
+            <img src="imagen/bandera_pailitas.png" alt="Bandera de Pailitas">
+            <img src="imagen/bandera_colombia.png" alt="Bandera de Colombia">
+        </div>
         <h2>Nuestra Fundación</h2>
-        <p>"Trabajamos con pasión para transformar vidas a través del arte, la cultura y el emprendimiento..."</p>
-    </section>
-    <section>
-        <h2>Actividades</h2>
-        <img src="actividad1.jpg" alt="Actividad 1">
-        <img src="actividad2.jpg" alt="Actividad 2">
-        <img src="actividad3.jpg" alt="Actividad 3">
-        <img src="actividad4.jpg" alt="Actividad 4">
-    </section>
+        <p style="font-size: 1.2em; font-style: italic; margin-top: 20px;">"Trabajamos con pasión para transformar vidas..."</p>
+        <footer>FundArtCE - NIT: 901584156-4</footer>
+    </div>
+
+    <div class="sidebar right">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="imagen/actividad1.jpg" alt="Actividad cultural 1">
+                <img src="imagen/actividad2.jpg" alt="Actividad cultural 2">
+                <img src="imagen/actividad3.jpg" alt="Actividad cultural 3">
+                <img src="imagen/actividad4.jpg" alt="Actividad cultural 4">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
